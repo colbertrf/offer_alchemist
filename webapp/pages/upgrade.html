@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upgrade | Offer Alchemist</title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script src="../assets/app.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            initPage();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="section section_center">
+        <h1 class="title_lg">Upgrade Your Offer Alchemist Experience</h1>
+
+        <p class="subtitle">
+            Unlock the full OS, templates, content engine, and lifetime access.
+            Your offer deserves the best version of you.
+        </p>
+    </section>
+
+    <!-- UPGRADE OPTIONS -->
+    <section class="section">
+
+        <!-- CREATOR -->
+        <div class="card">
+            <div class="card_title">Upgrade to Creator</div>
+
+            <div class="pricing_price">$99</div>
+
+            <div class="card_text mb_20">
+                ✔ Everything in Pro<br>
+                ✔ Offer Alchemist OS<br>
+                ✔ Templates Library<br>
+                ✔ Content Engine<br>
+                ✔ Launch Calendar
+            </div>
+
+            <button class="button_primary" onclick="startCheckout('STRIPE_PRICE_CREATOR_REPLACE_ME')">
+                Upgrade to Creator
+            </button>
+        </div>
+
+        <!-- LIFETIME -->
+        <div class="card">
+            <div class="card_title">Upgrade to Lifetime</div>
+
+            <div class="pricing_price">$249</div>
+
+            <div class="card_text mb_20">
+                ✔ Everything in Creator<br>
+                ✔ Lifetime Updates<br>
+                ✔ Priority Access<br>
+                ✔ Accelerator Discounts<br>
+                ✔ Future OS Expansions
+            </div>
+
+            <button class="button_primary" onclick="startCheckout('STRIPE_PRICE_LIFETIME_REPLACE_ME')">
+                Upgrade to Lifetime
+            </button>
+        </div>
+
+    </section>
+
+</body>
+</html>

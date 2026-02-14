@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing | Offer Alchemist</title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script src="../assets/app.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            initPage();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="section section_center">
+        <h1 class="title_lg">Choose Your Plan</h1>
+
+        <p class="subtitle">
+            Start with the plan that fits your goals. Upgrade anytime as your offer grows.
+        </p>
+    </section>
+
+    <!-- PRICING GRID -->
+    <section class="section">
+        <div class="grid_3">
+
+            <!-- PRO -->
+            <div class="pricing_card">
+                <div class="pricing_title">Pro</div>
+                <div class="pricing_price">$49</div>
+
+                <div class="pricing_features">
+                    ✔ Full Offer Wizard<br>
+                    ✔ Messaging Stack<br>
+                    ✔ Pricing Strategy<br>
+                    ✔ Launch Plan
+                </div>
+
+                <button class="button_primary" onclick="startCheckout('STRIPE_PRICE_PRO_REPLACE_ME')">
+                    Get Pro
+                </button>
+            </div>
+
+            <!-- CREATOR -->
+            <div class="pricing_card">
+                <div class="pricing_title">Creator</div>
+                <div class="pricing_price">$99</div>
+
+                <div class="pricing_features">
+                    ✔ Everything in Pro<br>
+                    ✔ Offer Alchemist OS<br>
+                    ✔ Templates Library<br>
+                    ✔ Content Engine
+                </div>
+
+                <button class="button_primary" onclick="startCheckout('STRIPE_PRICE_CREATOR_REPLACE_ME')">
+                    Get Creator
+                </button>
+            </div>
+
+            <!-- LIFETIME -->
+            <div class="pricing_card">
+                <div class="pricing_title">Lifetime</div>
+                <div class="pricing_price">$249</div>
+
+                <div class="pricing_features">
+                    ✔ Everything in Creator<br>
+                    ✔ Lifetime Updates<br>
+                    ✔ Priority Access<br>
+                    ✔ Accelerator Discounts
+                </div>
+
+                <button class="button_primary" onclick="startCheckout('STRIPE_PRICE_LIFETIME_REPLACE_ME')">
+                    Get Lifetime
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ACCELERATOR CTA -->
+    <section class="section section_center">
+        <h2 class="title_md">Want 1:1 Guidance?</h2>
+
+        <p class="subtitle">
+            Join the 30‑day Creator Accelerator and build your offer with direct support.
+        </p>
+
+        <button class="button_secondary" onclick="goToAccelerator()">
+            Learn About the Accelerator
+        </button>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Account | Offer Alchemist</title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script src="../assets/app.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            initPage();
+        });
+
+        function openBilling() {
+            const customerId = localStorage.getItem("stripe_customer_id");
+
+            if (!customerId) {
+                alert("We couldn’t find your billing information. Please check your email for your Stripe receipt.");
+                return;
+            }
+
+            openPortal(customerId);
+        }
+    </script>
+</head>
+
+<body>
+
+    <section class="section section_center">
+        <h1 class="title_lg">Your Account</h1>
+
+        <p class="subtitle">
+            Manage your subscription, payment method, and billing history.
+        </p>
+
+        <button class="button_primary mt_20" onclick="openBilling()">
+            Open Billing Portal
+        </button>
+
+        <p class="subtitle mt_40">
+            Need help? Check your purchase confirmation email or contact support.
+        </p>
+    </section>
+
+</body>
+</html>

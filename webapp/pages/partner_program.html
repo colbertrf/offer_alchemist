@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partner Program | Offer Alchemist</title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script src="../assets/app.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            initPage();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="section section_center">
+        <h1 class="title_lg">Partner Program</h1>
+
+        <p class="subtitle">
+            Earn commissions by sharing Offer Alchemist with creators who need clarity,
+            structure, and momentum.
+        </p>
+    </section>
+
+    <!-- PROGRAM DETAILS -->
+    <section class="section">
+        <div class="grid_3">
+
+            <div class="card">
+                <div class="card_title">Generous Commissions</div>
+                <div class="card_text">
+                    Earn recurring and one‑time commissions on every referral
+                    that becomes a customer.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_title">High‑Value Product</div>
+                <div class="card_text">
+                    Offer Alchemist solves a real problem for creators —
+                    making it easy to recommend with confidence.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_title">Simple Tracking</div>
+                <div class="card_text">
+                    Every referral is tracked automatically using your unique
+                    affiliate link.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- AFFILIATE LINK GENERATOR -->
+    <section class="section">
+        <div class="card">
+            <div class="card_title">Generate Your Affiliate Link</div>
+
+            <div class="form_group">
+                <label>Your Affiliate ID</label>
+                <input type="text" id="affiliate_id" placeholder="yourname123" />
+            </div>
+
+            <button class="button_primary" onclick="generateAffiliateLink()">
+                Generate Link
+            </button>
+
+            <div id="affiliate_link" class="affiliate_box mt_20">
+                Your affiliate link will appear here.
+            </div>
+
+            <button class="button_secondary mt_20" onclick="copyAffiliateLink()">
+                Copy Link
+            </button>
+
+            <div id="copy_message" class="success_message">
+                Affiliate link copied to clipboard.
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

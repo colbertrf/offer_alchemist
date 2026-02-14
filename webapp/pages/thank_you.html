@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You | Offer Alchemist</title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script src="../assets/app.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            initPage();
+
+            const params = new URLSearchParams(window.location.search);
+            const customerId = params.get("customer_id");
+            if (customerId) {
+                localStorage.setItem("stripe_customer_id", customerId);
+            }
+        });
+
+        function goToOS() {
+            window.location.href = "os_landing.html";
+        }
+
+        function goToAccount() {
+            window.location.href = "account.html";
+        }
+    </script>
+</head>
+
+<body>
+
+    <section class="section section_center">
+        <h1 class="title_lg">You're In 🎉</h1>
+
+        <p class="subtitle">
+            Thank you for joining Offer Alchemist.
+            Your offer‑building journey starts now.
+        </p>
+
+        <button class="button_primary mt_20" onclick="goToOS()">
+            Enter Offer Alchemist OS
+        </button>
+
+        <button class="button_secondary mt_20" onclick="goToAccount()">
+            Manage Your Account
+        </button>
+
+        <p class="subtitle mt_40">
+            A confirmation email is on its way.
+            If you don’t see it, check your spam or promotions folder.
+        </p>
+    </section>
+
+</body>
+</html>

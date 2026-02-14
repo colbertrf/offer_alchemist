@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creator Accelerator | Offer Alchemist</title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script src="../assets/app.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            initPage();
+            handleAcceleratorForm();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="section section_center">
+        <h1 class="title_lg">Creator Accelerator</h1>
+
+        <p class="subtitle">
+            A 30‑day sprint to build, refine, and launch your offer with direct guidance.
+            This is for creators who want momentum, clarity, and execution.
+        </p>
+    </section>
+
+    <!-- PROGRAM OVERVIEW -->
+    <section class="section">
+        <div class="grid_3">
+
+            <div class="card">
+                <div class="card_title">Week 1 — Offer Clarity</div>
+                <div class="card_text">
+                    Lock in your offer concept, positioning, and transformation.
+                    No more guessing what you should sell.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_title">Week 2 — Messaging & Pricing</div>
+                <div class="card_text">
+                    Build your messaging stack and pricing strategy so your offer
+                    is clear, compelling, and easy to say yes to.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_title">Week 3 — Assets & Launch</div>
+                <div class="card_text">
+                    Create your core assets and launch plan so you can ship
+                    with confidence instead of perfectionism.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section class="section">
+        <div class="card">
+            <div class="card_title">Apply for the Accelerator</div>
+
+            <form id="accelerator_form">
+
+                <div class="form_group">
+                    <label>Name</label>
+                    <input type="text" name="name" required />
+                </div>
+
+                <div class="form_group">
+                    <label>Email</label>
+                    <input type="email" name="email" required />
+                </div>
+
+                <div class="form_group">
+                    <label>What are you trying to build?</label>
+                    <textarea name="goal" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="button_primary">
+                    Submit Application
+                </button>
+
+                <div id="success_message" class="success_message">
+                    Application received. We’ll be in touch shortly.
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
