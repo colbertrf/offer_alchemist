@@ -2,6 +2,8 @@
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
+console.log("RUNNING SUBSCRIPTION VERSION");
+
 exports.handler = async (event) => {
   try {
     const { price_id, affiliate } = JSON.parse(event.body || "{}");
@@ -11,10 +13,10 @@ exports.handler = async (event) => {
     }
 
     const session = await stripe.checkout.sessions.create({
-      mode: "payment",
+      mode: "subscription",
       line_items: [{ price: price_id, quantity: 1 }],
-      success_url: "https://yourdomain.com/thank_you",
-      cancel_url: "https://yourdomain.com/",
+      success_url: "https://delicate-pudding-e3adaf.netlify.app/thank_you",
+      cancel_url: "https://delicate-pudding-e3adaf.netlify.app/",
       metadata: {
         price_id,
         affiliate: affiliate || ""
