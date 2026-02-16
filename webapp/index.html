@@ -83,5 +83,63 @@
         </button>
     </section>
 
+    <!-- WORK WITH ME -->
+    <section id="work_with_me" class="section">
+        <h2 class="title_md">Shorts Subscriber Accelerator — Gold Tier</h2>
+
+        <p class="subtitle">
+            A done‑for‑you shorts creation service designed to grow your subscribers fast using my proven ElonMatrix strategy.
+        </p>
+
+        <div class="card" style="max-width: 700px; margin: auto;">
+            <div class="card_title">What You Get</div>
+            <div class="card_text">
+                <ul>
+                    <li>7–10 subscriber‑optimized shorts every week</li>
+                    <li>Hooks, scripts, pacing, editing — all done for you</li>
+                    <li>Subscriber‑focused CTA integration</li>
+                    <li>Weekly adjustments based on performance</li>
+                    <li>A clear path to faster subscriber growth</li>
+                </ul>
+            </div>
+
+            <div class="card_title" style="margin-top: 20px;">Price</div>
+            <div class="card_text">
+                <strong>$300/month</strong>
+            </div>
+
+            <button id="subscribe_button" class="button_primary" style="margin-top: 20px;">
+                Subscribe for $300/month
+            </button>
+        </div>
+
+        <!-- STRIPE SUBSCRIPTION SCRIPT -->
+        <script>
+            document.getElementById("subscribe_button").addEventListener("click", async () => {
+                try {
+                    const response = await fetch("/.netlify/functions/create_checkout", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            price_id: "price_1T1CLw6kKqz7yEXERblYr1vr"
+                        })
+                    });
+
+                    const data = await response.json();
+
+                    if (data.url) {
+                        window.location.href = data.url;
+                    } else {
+                        console.error("No checkout URL returned:", data);
+                        alert("Something went wrong. Please try again.");
+                    }
+                } catch (err) {
+                    console.error("Checkout error:", err);
+                    alert("Unable to start checkout. Please try again.");
+                }
+            });
+        </script>
+    </section>
+
 </body>
 </html>
